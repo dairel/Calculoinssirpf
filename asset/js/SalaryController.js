@@ -16,14 +16,16 @@ var SalaryController = {
 	calculateSalary: function(form) {
 		var 
 			salary = parseFloat(form.salary.value),
-            result = 0;
-            resultinss = 0;
-            resultirpf = 0;
-            resultliquid = 0;
+			salaryinss = 0.0;
+			salaryirpf = 0.0;
+			salaryliquid =0.0;
+			
+           
+          
             
 		
 		var callback = function(result) {
-			SalaryController.showResult(result);			
+			SalaryController.showResult(salaryinss);			
 		};
 		
 		

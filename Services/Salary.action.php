@@ -1,22 +1,29 @@
 <?php
-require 'BMIService.class.php';
+require 'SalaryService.php';
 
-$weight = $_GET['weight'];
-$height = $_GET['height'];
-$bmiIndex = 0.0;
+$salary = $_GET['salary'];
+$Salaryinss = 0;
+$Salaryirpf = 0;
+$Salaryliquid =0;
 
-if(is_numeric($weight) && is_numeric($height)) {
-    $bmiIndex = BMIService::getIndex($weight, $height);
+
+
+if(is_numeric($salary)) {
+   
+    $Salaryinss = SalaryService::getIndex1($salary);
+    $Salaryirpf = SalaryService::getIndex2($salary);
+    $Salaryliquid = SalaryService::getIndex3($salary);
 }
 
-sleep (1);
 
-echo $bmiIndex;
 
  
 
 
-
+echo $Salaryinss;
+echo $Salaryirpf;
+echo $Salaryliquid;
+ 
 
 
 ?>
