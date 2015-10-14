@@ -2,7 +2,7 @@ var SalaryService = {
 
 	getIndex: function(salary, callback) {
 		$.ajax({
-		  url: 'services/bmi.action.php',
+		  url: 'services/Salary.action.php',
 		  data: {'salary': salary},
 		  success: function(result) {
 		  	callback(parseFloat(result));
